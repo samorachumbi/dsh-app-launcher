@@ -1,0 +1,34 @@
+{
+  "name": "dsh-app-launcher",
+  "version": "0.1.0",
+  "description": "A draggable launcher in the DeepSeek Harness shell for host-rendered plugin pages: one click opens your app in its own OS window, with a liveness dot so a dead instance is visible instead of discovered.",
+  "keywords": ["dsh", "deepseek-harness", "plugin", "launcher", "ui", "client-half"],
+  "repository": { "type": "git", "url": "git+https://github.com/samorachumbi/dsh-app-launcher.git" },
+  "homepage": "https://github.com/samorachumbi/dsh-app-launcher#readme",
+  "author": "Samora Chumbi",
+  "license": "MIT",
+  "type": "module",
+  "main": "lib/index.js",
+  "exports": {
+    ".": {
+      "default": "./lib/index.js"
+    },
+    "./client": {
+      "default": "./lib/client.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "dsh": {
+    "client": {
+      "platform": "web"
+    }
+  },
+  "scripts": {
+    "probe": "node scripts/probe.mjs"
+  },
+  "files": [
+    "lib",
+    "README.md",
+    "LICENSE"
+  ]
+}
